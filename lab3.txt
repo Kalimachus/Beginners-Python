@@ -1,0 +1,81 @@
+#BMI.py
+#precondition: neither input parameters cannot be zero
+def bmi(inches,pounds):
+	result = pounds / (inches**2) * 703;
+	if(result < 18.5):
+		status = "Underweight";
+	elif(result >= 18.5 and result < 25):
+		status = "Normal weight";
+	elif(result >= 25 and result < 30):
+		status = "Overweight";
+	else:
+		status = "Obese";
+	print("BMI =", result, ":", status);
+	return;
+
+#main
+inches = input("Enter your height in inches, including decimal fractional parts: ");
+weight = input("Enter your weight in pounds: ");
+bmi(float(inches),float(weight));
+#END BMI.PY
+
+========================== RESTART: C:\temp\bmi.py ==========================
+Enter your height in inches, including decimal fractional parts: 67.75
+Enter your weight in pounds: 120
+BMI = 18.378834710856335 : Underweight
+>>> 
+========================== RESTART: C:\temp\bmi.py ==========================
+Enter your height in inches, including decimal fractional parts: 67.75
+Enter your weight in pounds: 121
+BMI = 18.531991666780137 : Normal weight
+>>> 
+========================== RESTART: C:\temp\bmi.py ==========================
+Enter your height in inches, including decimal fractional parts: 67.75
+Enter your weight in pounds: 163
+BMI = 24.964583815579854 : Normal weight
+>>> 
+========================== RESTART: C:\temp\bmi.py ==========================
+Enter your height in inches, including decimal fractional parts: 67.75
+Enter your weight in pounds: 164
+BMI = 25.117740771503655 : Overweight
+>>> 
+========================== RESTART: C:\temp\bmi.py ==========================
+Enter your height in inches, including decimal fractional parts: 67.75
+Enter your weight in pounds: 195
+BMI = 29.86560640514154 : Overweight
+>>> 
+========================== RESTART: C:\temp\bmi.py ==========================
+Enter your height in inches, including decimal fractional parts: 67.75
+Enter your weight in pounds: 196
+BMI = 30.018763361065346 : Obese
+>>>
+ 
+>>>#Fibonacci
+>>> def calcFibo(num):
+	if(num == 0):
+		return 0;
+	elif(num == 1):
+		return 1;
+	else:
+		return calcFibo(num-2)+calcFibo(num-1);
+
+	
+>>> def fibonacci(num):
+	for i in range(num):
+		print(calcFibo(i));
+
+		
+>>> fibonacci(12)
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+>>> 

@@ -1,0 +1,72 @@
+>>> # 1. Powers Function
+>>> def powers(num):
+	for x in range(0,11):
+		print(num**x)
+	return;
+
+>>> powers(4);
+1
+4
+16
+64
+256
+1024
+4096
+16384
+65536
+262144
+1048576
+>>> powers(5)
+1
+5
+25
+125
+625
+3125
+15625
+78125
+390625
+1953125
+9765625
+>>> powers(6)
+1
+6
+36
+216
+1296
+7776
+46656
+279936
+1679616
+10077696
+60466176
+>>> #2. Palindrome Function
+>>> def palindrome(l1,l2,l3,l4,l5):
+	forward ="";
+	reverse = "";
+	forward = l1+l2+l3+l4+l5;
+	reverse = l5+l4+l3+l2+l1;
+	print(forward);
+	print(reverse);
+	return;
+
+>>> palindrome('P','y','t','h','o');
+Pytho
+ohtyP
+>>> palindrome('m','a','d','a','m');
+madam
+madam
+>>> palindrome('s','t','a','t','s');
+stats
+stats
+>>> # 3. Miles Converter Function
+>>> def miles_converter(miles):
+	mToYrds = miles*1760;
+	mToFt = miles*5280;
+	mToIn = miles*63360;	
+	print(miles,'miles =', mToYrds,'yards,',
+	      mToFt,'feet,',mToIn, 'inches');
+	return;
+
+>>> miles_converter(3.8);
+3.8 miles = 6688.0 yards, 20064.0 feet, 240768.0 inches
